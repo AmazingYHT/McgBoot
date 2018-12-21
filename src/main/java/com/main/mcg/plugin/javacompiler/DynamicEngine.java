@@ -16,6 +16,8 @@
 
 package com.main.mcg.plugin.javacompiler;
  
+import com.main.mcg.common.Constants;
+
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -30,8 +32,7 @@ import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.ToolProvider;
 
-import com.mcg.common.Constants;
- 
+
 public class DynamicEngine {
     private static DynamicEngine ourInstance = new DynamicEngine();
  

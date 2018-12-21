@@ -22,20 +22,21 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.mcg.entity.flow.FlowStruct;
-import com.mcg.entity.flow.data.FlowData;
-import com.mcg.entity.flow.gmybatis.FlowGmybatis;
-import com.mcg.entity.flow.java.FlowJava;
-import com.mcg.entity.flow.json.FlowJson;
-import com.mcg.entity.flow.model.FlowModel;
-import com.mcg.entity.flow.script.FlowScript;
-import com.mcg.entity.flow.sequence.FlowSequence;
-import com.mcg.entity.flow.sqlexecute.FlowSqlExecute;
-import com.mcg.entity.flow.sqlquery.FlowSqlQuery;
-import com.mcg.entity.flow.text.FlowText;
-import com.mcg.entity.generate.Order;
-import com.mcg.entity.generate.Orders;
-import com.mcg.plugin.build.McgProduct;
+import com.main.mcg.entity.flow.FlowStruct;
+import com.main.mcg.entity.flow.data.FlowData;
+import com.main.mcg.entity.flow.gmybatis.FlowGmybatis;
+import com.main.mcg.entity.flow.java.FlowJava;
+import com.main.mcg.entity.flow.json.FlowJson;
+import com.main.mcg.entity.flow.model.FlowModel;
+import com.main.mcg.entity.flow.script.FlowScript;
+import com.main.mcg.entity.flow.sequence.FlowSequence;
+import com.main.mcg.entity.flow.sqlexecute.FlowSqlExecute;
+import com.main.mcg.entity.flow.sqlquery.FlowSqlQuery;
+import com.main.mcg.entity.flow.text.FlowText;
+import com.main.mcg.entity.generate.Order;
+import com.main.mcg.entity.generate.Orders;
+import com.main.mcg.plugin.build.McgProduct;
+
 
 
 /**
@@ -52,15 +53,15 @@ public class TopoSort {
 	 * max:定义顶点的最大容量为100 ver:使用内部Vertexs类创建一个数组ver,存储顶点的关键字 map:AOV网的邻接矩阵表
 	 * n:顶点的数量 topoSort:存储最终得到的序列
 	 */
-	int max;
-	Vertexs ver[];
-	int map[][];
-	int n;
-	String topoNameSort[];
+	int                  max;
+	Vertexs              ver[];
+	int                  map[][];
+	int                  n;
+	String               topoNameSort[];
 	Map<Integer, String> nodeMap;
 	Map<String, Integer> sortMap;
-	List<FlowSequence> flowSequenceList;
-	Map<String, Order> orderMap;
+	List<FlowSequence>   flowSequenceList;
+	Map<String, Order>   orderMap;
 	
 	// 构造顶点关键字数组
 	public void addVertex(String v) {

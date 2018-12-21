@@ -26,8 +26,8 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import com.mcg.entity.auth.PermissionCollection;
-import com.mcg.entity.auth.UserCacheBean;
+import com.main.mcg.entity.auth.PermissionCollection;
+import com.main.mcg.entity.auth.UserCacheBean;
 
 
 @ServerEndpoint(value = "/message", configurator = GetHttpSessionConfigurator.class)

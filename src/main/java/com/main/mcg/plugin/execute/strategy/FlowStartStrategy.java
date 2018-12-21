@@ -28,12 +28,7 @@ import com.main.mcg.entity.generate.ExecuteStruct;
 import com.main.mcg.entity.generate.RunResult;
 import com.main.mcg.plugin.build.McgProduct;
 import com.main.mcg.plugin.execute.ProcessStrategy;
-import com.mcg.entity.flow.start.FlowStart;
-import com.mcg.entity.flow.start.Var;
-import com.mcg.entity.generate.ExecuteStruct;
-import com.mcg.entity.generate.RunResult;
-import com.mcg.plugin.build.McgProduct;
-import com.mcg.plugin.execute.ProcessStrategy;
+
 
 public class FlowStartStrategy implements ProcessStrategy
 {

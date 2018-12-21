@@ -20,9 +20,9 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-import com.mcg.entity.flow.data.DataRecord;
-import com.mcg.entity.flow.gmybatis.Table;
-import com.mcg.entity.global.datasource.McgDataSource;
+import com.main.mcg.entity.flow.data.DataRecord;
+import com.main.mcg.entity.flow.gmybatis.Table;
+
 
 public interface McgConnect {
     

@@ -16,15 +16,15 @@
 
 package com.main.mcg.plugin.ehcache;
 
-import com.mcg.common.Constants;
-import com.mcg.common.SpringContextHelper;
+import com.main.mcg.common.Constants;
+import com.main.mcg.common.SpringContextHelper;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 
 public class CachePlugin {
 
-    private static CacheManager cacheManager = ((CacheManager)SpringContextHelper.getSpringBean("cacheManager"));
+    private static CacheManager cacheManager = ((CacheManager) SpringContextHelper.getSpringBean("cacheManager"));
     
     public static Cache addCache(String cacheName) {
         cacheManager.addCache(cacheName);

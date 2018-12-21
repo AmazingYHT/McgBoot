@@ -29,27 +29,27 @@ import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.mcg.common.sysenum.EletypeEnum;
-import com.mcg.common.sysenum.LogTypeEnum;
-import com.mcg.common.sysenum.MessageTypeEnum;
-import com.mcg.entity.flow.gmybatis.Table;
-import com.mcg.entity.flow.sqlquery.FlowSqlQuery;
-import com.mcg.entity.generate.ExecuteStruct;
-import com.mcg.entity.generate.RunResult;
-import com.mcg.entity.global.datasource.McgDataSource;
-import com.mcg.entity.message.FlowBody;
-import com.mcg.entity.message.Message;
-import com.mcg.plugin.build.McgProduct;
-import com.mcg.plugin.dbconn.FlowDataAdapterImpl;
-import com.mcg.plugin.dbconn.McgBizAdapter;
-import com.mcg.plugin.execute.ProcessStrategy;
-import com.mcg.plugin.generate.FlowTask;
-import com.mcg.plugin.websocket.MessagePlugin;
-import com.mcg.service.FlowService;
-import com.mcg.service.impl.FlowServiceImpl;
-import com.mcg.util.DataConverter;
+import com.main.mcg.common.sysenum.EletypeEnum;
+import com.main.mcg.common.sysenum.LogTypeEnum;
+import com.main.mcg.common.sysenum.MessageTypeEnum;
+import com.main.mcg.entity.flow.sqlquery.FlowSqlQuery;
+import com.main.mcg.entity.generate.ExecuteStruct;
+import com.main.mcg.entity.generate.RunResult;
+import com.main.mcg.entity.global.datasource.McgDataSource;
+import com.main.mcg.entity.message.FlowBody;
+import com.main.mcg.entity.message.Message;
+import com.main.mcg.plugin.build.McgProduct;
+import com.main.mcg.plugin.dbconn.FlowDataAdapterImpl;
+import com.main.mcg.plugin.dbconn.McgBizAdapter;
+import com.main.mcg.plugin.execute.ProcessStrategy;
+import com.main.mcg.plugin.generate.FlowTask;
+import com.main.mcg.plugin.websocket.MessagePlugin;
+import com.main.mcg.service.FlowService;
+import com.main.mcg.service.impl.FlowServiceImpl;
+import com.main.mcg.util.DataConverter;
 
-public class FlowSqlQueryStrategy implements ProcessStrategy {
+public class FlowSqlQueryStrategy implements ProcessStrategy
+{
 
 	@Override
 	public void prepare(ArrayList<String> sequence, McgProduct mcgProduct,

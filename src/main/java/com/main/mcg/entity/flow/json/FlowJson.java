@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.main.mcg.entity.flow.FlowBase;
 import com.main.mcg.entity.generate.ExecuteStruct;
+import com.main.mcg.entity.generate.RunResult;
 import com.main.mcg.plugin.assist.ExceptionProcess;
 import com.main.mcg.plugin.execute.ProcessContext;
 import com.main.mcg.plugin.execute.strategy.FlowJsonStrategy;

@@ -21,22 +21,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
-import com.mcg.common.sysenum.EletypeEnum;
-import com.mcg.common.sysenum.LogTypeEnum;
-import com.mcg.common.sysenum.MessageTypeEnum;
-import com.mcg.entity.flow.java.FlowJava;
-import com.mcg.entity.generate.ExecuteStruct;
-import com.mcg.entity.generate.RunResult;
-import com.mcg.entity.message.FlowBody;
-import com.mcg.entity.message.Message;
-import com.mcg.plugin.build.McgProduct;
-import com.mcg.plugin.execute.ProcessStrategy;
-import com.mcg.plugin.generate.FlowTask;
-import com.mcg.plugin.javacompiler.DynamicEngine;
-import com.mcg.plugin.websocket.MessagePlugin;
-import com.mcg.util.DataConverter;
+import com.main.mcg.common.sysenum.EletypeEnum;
+import com.main.mcg.common.sysenum.LogTypeEnum;
+import com.main.mcg.common.sysenum.MessageTypeEnum;
+import com.main.mcg.entity.flow.java.FlowJava;
+import com.main.mcg.entity.generate.ExecuteStruct;
+import com.main.mcg.entity.generate.RunResult;
+import com.main.mcg.entity.message.FlowBody;
+import com.main.mcg.entity.message.Message;
+import com.main.mcg.plugin.build.McgProduct;
+import com.main.mcg.plugin.execute.ProcessStrategy;
+import com.main.mcg.plugin.generate.FlowTask;
+import com.main.mcg.plugin.javacompiler.DynamicEngine;
+import com.main.mcg.plugin.websocket.MessagePlugin;
+import com.main.mcg.util.DataConverter;
 
-public class FlowJavaStrategy implements ProcessStrategy {
+public class FlowJavaStrategy implements ProcessStrategy
+{
 
 	@Override
 	public void prepare(ArrayList<String> sequence, McgProduct mcgProduct, ExecuteStruct executeStruct) throws Exception {
@@ -66,7 +67,7 @@ public class FlowJavaStrategy implements ProcessStrategy {
         flowBody.setLogType(LogTypeEnum.INFO.getValue());
         flowBody.setLogTypeDesc(LogTypeEnum.INFO.getName());
         message.setBody(flowBody);
-        FlowTask flowTask = FlowTask.executeLocal.get();    
+        FlowTask flowTask = FlowTask.executeLocal.get();
         MessagePlugin.push(flowTask.getHttpSessionId(), message); 		
 		
 		String dataJson = resolve(flowJava.getJavaCore().getSource(), parentParam);

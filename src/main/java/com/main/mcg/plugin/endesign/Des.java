@@ -16,12 +16,13 @@
 
 package com.main.mcg.plugin.endesign;
 
+import com.main.mcg.common.Constants;
+
 import java.security.Key;
 import java.security.Security;
 
 import javax.crypto.Cipher;
 
-import com.mcg.common.Constants;
 
 /**
  * DES加密和解密工具,可以对字符串进行加密和解密操作  。 

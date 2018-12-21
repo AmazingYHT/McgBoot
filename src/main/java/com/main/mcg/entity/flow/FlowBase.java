@@ -16,8 +16,9 @@
 
 package com.main.mcg.entity.flow;
 
-import com.mcg.plugin.build.McgProduct;
-public abstract class FlowBase extends McgProduct {
+import com.main.mcg.plugin.build.McgProduct;
+public abstract class FlowBase extends McgProduct
+{
     
     private static final long serialVersionUID = -7660980819340679924L;
     private String label;

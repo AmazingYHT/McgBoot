@@ -23,9 +23,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.main.mcg.common.sysenum.DatabaseTypeEnum;
+import com.main.mcg.entity.flow.data.DataRecord;
+import com.main.mcg.entity.flow.gmybatis.Table;
 import com.main.mcg.entity.global.datasource.McgDataSource;
 import com.main.mcg.plugin.dbconn.mysql.MysqlConnectImpl;
-import com.main.mcg.plugin.dbconn.oracle.OracleConnectImpl;
 import com.main.mcg.plugin.dbconn.postgresql.PostgresqlConnectImpl;
 import org.postgresql.ds.PGPoolingDataSource;
 

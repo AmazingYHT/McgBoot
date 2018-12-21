@@ -23,21 +23,21 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.mcg.plugin.build.McgProduct;
+import com.main.mcg.plugin.build.McgProduct;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement
 public class ExecuteStruct implements Serializable {
 
-    private static final long serialVersionUID = -677740433314925325L;
+    private static final long       serialVersionUID = -677740433314925325L;
     @XmlElement
-    private Orders orders;
+    private Orders                  orders;
     @XmlElement
     private Map<String, McgProduct> dataMap;
     @XmlElement
-    private RunStatus runStatus;
+    private RunStatus               runStatus;
     @XmlElement
-    private Map<String, RunResult> runResultMap;
+    private Map<String, RunResult>  runResultMap;
     
     public Orders getOrders() {
         return orders;

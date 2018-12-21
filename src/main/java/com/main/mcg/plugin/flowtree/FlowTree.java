@@ -22,17 +22,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TreeMap;
 
-import com.mcg.entity.global.topology.Topology;
+import com.main.mcg.entity.global.topology.Topology;
 
 public class FlowTree implements Serializable {
 
-	private static final long serialVersionUID = 1215620860343159189L;
+	private static final long                      serialVersionUID = 1215620860343159189L;
 	//当前选中节点
-    private Topology selected;
+    private              Topology                  selected;
     //流程树数据
-    private TreeMap<String, Topology> treeMap;
+    private              TreeMap<String, Topology> treeMap;
     //所有节点数据
-    private List<Topology> topologys;
+    private              List<Topology>            topologys;
     
     public FlowTree(Topology selected, List<Topology> topologys){
     	setSelected(selected);

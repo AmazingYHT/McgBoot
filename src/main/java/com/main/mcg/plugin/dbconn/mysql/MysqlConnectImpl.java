@@ -27,14 +27,15 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import com.mcg.entity.flow.data.DataRecord;
-import com.mcg.entity.flow.gmybatis.Table;
-import com.mcg.plugin.dbconn.AbstractConnect;
-import com.mcg.plugin.dbconn.McgConnect;
-import com.mcg.util.JDBCTypesUtils;
-import com.mcg.util.Tools;
+import com.main.mcg.entity.flow.data.DataRecord;
+import com.main.mcg.entity.flow.gmybatis.Table;
+import com.main.mcg.plugin.dbconn.AbstractConnect;
+import com.main.mcg.plugin.dbconn.McgConnect;
+import com.main.mcg.util.JDBCTypesUtils;
+import com.main.mcg.util.Tools;
 
-public class MysqlConnectImpl extends AbstractConnect implements McgConnect {
+public class MysqlConnectImpl extends AbstractConnect implements McgConnect
+{
 
     public MysqlConnectImpl(DataSource dataSource) {
         super(dataSource);

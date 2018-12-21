@@ -18,16 +18,17 @@ package com.main.mcg.controller.html;
 
 import java.util.List;
 
+import com.main.mcg.controller.base.BaseController;
+import com.main.mcg.entity.common.SelectEntity;
+import com.main.mcg.service.FlowService;
+import com.main.mcg.util.PageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
-import com.mcg.controller.base.BaseController;
-import com.mcg.entity.common.SelectEntity;
-import com.mcg.service.FlowService;
-import com.mcg.util.PageData;
+
 
 /**
  * 
@@ -39,10 +40,11 @@ import com.mcg.util.PageData;
  */
 @Controller
 @RequestMapping(value="/html")
-public class HtmlController extends BaseController {
+public class HtmlController extends BaseController
+{
 
     @Autowired
-    private FlowService flowService;    
+    private FlowService flowService;
     
 	/* 流程节点悬浮工具层Modal */
 	@RequestMapping(value="/flowSuspension")

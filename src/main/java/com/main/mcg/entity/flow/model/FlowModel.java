@@ -35,12 +35,7 @@ import com.main.mcg.plugin.execute.ProcessContext;
 import com.main.mcg.plugin.execute.strategy.FlowModelStrategy;
 import org.hibernate.validator.constraints.NotBlank;
 
-import com.mcg.entity.flow.FlowBase;
-import com.mcg.entity.generate.ExecuteStruct;
-import com.mcg.entity.generate.RunResult;
-import com.mcg.plugin.assist.ExceptionProcess;
-import com.mcg.plugin.execute.ProcessContext;
-import com.mcg.plugin.execute.strategy.FlowModelStrategy;
+
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement

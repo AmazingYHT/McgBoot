@@ -16,40 +16,39 @@
 
 package com.main.mcg.plugin.generate;
 
+import com.main.mcg.common.sysenum.EletypeEnum;
+import com.main.mcg.common.sysenum.LogTypeEnum;
+import com.main.mcg.common.sysenum.MessageTypeEnum;
 import com.main.mcg.entity.flow.FlowStruct;
+import com.main.mcg.entity.flow.data.FlowData;
+import com.main.mcg.entity.flow.end.FlowEnd;
+import com.main.mcg.entity.flow.gmybatis.FlowGmybatis;
+import com.main.mcg.entity.flow.java.FlowJava;
+import com.main.mcg.entity.flow.json.FlowJson;
+import com.main.mcg.entity.flow.model.FlowModel;
+import com.main.mcg.entity.flow.script.FlowScript;
+import com.main.mcg.entity.flow.sqlexecute.FlowSqlExecute;
+import com.main.mcg.entity.flow.sqlquery.FlowSqlQuery;
+import com.main.mcg.entity.flow.start.FlowStart;
+import com.main.mcg.entity.flow.text.FlowText;
 import com.main.mcg.entity.generate.ExecuteStruct;
-import com.mcg.common.sysenum.EletypeEnum;
-import com.mcg.common.sysenum.LogTypeEnum;
-import com.mcg.common.sysenum.MessageTypeEnum;
-import com.mcg.entity.flow.FlowStruct;
-import com.mcg.entity.flow.data.FlowData;
-import com.mcg.entity.flow.end.FlowEnd;
-import com.mcg.entity.flow.gmybatis.FlowGmybatis;
-import com.mcg.entity.flow.java.FlowJava;
-import com.mcg.entity.flow.json.FlowJson;
-import com.mcg.entity.flow.model.FlowModel;
-import com.mcg.entity.flow.script.FlowScript;
-import com.mcg.entity.flow.sqlexecute.FlowSqlExecute;
-import com.mcg.entity.flow.sqlquery.FlowSqlQuery;
-import com.mcg.entity.flow.start.FlowStart;
-import com.mcg.entity.flow.text.FlowText;
-import com.mcg.entity.generate.ExecuteStruct;
-import com.mcg.entity.generate.Order;
-import com.mcg.entity.generate.RunResult;
-import com.mcg.entity.message.FlowBody;
-import com.mcg.entity.message.Message;
-import com.mcg.entity.message.NotifyBody;
-import com.mcg.plugin.build.McgDirector;
-import com.mcg.plugin.build.McgProduct;
-import com.mcg.plugin.websocket.MessagePlugin;
-import com.mcg.service.FlowService;
+import com.main.mcg.entity.generate.Order;
+import com.main.mcg.entity.generate.RunResult;
+import com.main.mcg.entity.message.FlowBody;
+import com.main.mcg.entity.message.Message;
+import com.main.mcg.entity.message.NotifyBody;
+import com.main.mcg.plugin.build.McgDirector;
+import com.main.mcg.plugin.build.McgProduct;
+import com.main.mcg.plugin.websocket.MessagePlugin;
+import com.main.mcg.service.FlowService;
+
 
 public class FlowTask implements Runnable {
 	public static ThreadLocal<FlowTask> executeLocal = new ThreadLocal<FlowTask>();
-    private String httpSessionId;
-    private FlowStruct flowStruct;
-    private FlowService flowService;
-    private ExecuteStruct executeStruct;
+    private       String                httpSessionId;
+    private       FlowStruct            flowStruct;
+    private       FlowService           flowService;
+    private       ExecuteStruct         executeStruct;
     
     public FlowTask(){
     	
@@ -84,7 +83,7 @@ public class FlowTask implements Runnable {
                     flowBody.setEleTypeDesc(EletypeEnum.START.getName());
                     flowBody.setEleId(flowStart.getStartId());
                     flowBody.setComment("运行值");
-                } else if(mcgProduct instanceof FlowModel) { 
+                } else if(mcgProduct instanceof FlowModel) {
                     FlowModel flowModel =(FlowModel)mcgProduct;
                     result = director.getFlowModelProduct(flowModel).build(executeStruct);
                     flowBody.setEleType(EletypeEnum.MODEL.getValue());

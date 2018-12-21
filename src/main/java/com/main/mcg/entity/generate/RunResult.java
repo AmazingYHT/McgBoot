@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.mcg.plugin.build.McgProduct;
+import com.main.mcg.plugin.build.McgProduct;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement

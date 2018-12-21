@@ -20,9 +20,9 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 import com.alibaba.fastjson.JSON;
-import com.mcg.common.Constants;
-import com.mcg.util.McgFileUtils;
 
+import com.main.mcg.common.Constants;
+import com.main.mcg.util.McgFileUtils;
 import freemarker.template.Template;
 
 public class FreeMakerTpLan implements TplLan {

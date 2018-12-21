@@ -18,17 +18,18 @@ package com.main.mcg.plugin.build;
 
 import java.util.ArrayList;
 
-import com.mcg.entity.flow.data.FlowData;
-import com.mcg.entity.flow.end.FlowEnd;
-import com.mcg.entity.flow.gmybatis.FlowGmybatis;
-import com.mcg.entity.flow.java.FlowJava;
-import com.mcg.entity.flow.json.FlowJson;
-import com.mcg.entity.flow.model.FlowModel;
-import com.mcg.entity.flow.script.FlowScript;
-import com.mcg.entity.flow.sqlexecute.FlowSqlExecute;
-import com.mcg.entity.flow.sqlquery.FlowSqlQuery;
-import com.mcg.entity.flow.start.FlowStart;
-import com.mcg.entity.flow.text.FlowText;
+import com.main.mcg.entity.flow.data.FlowData;
+import com.main.mcg.entity.flow.end.FlowEnd;
+import com.main.mcg.entity.flow.gmybatis.FlowGmybatis;
+import com.main.mcg.entity.flow.java.FlowJava;
+import com.main.mcg.entity.flow.json.FlowJson;
+import com.main.mcg.entity.flow.model.FlowModel;
+import com.main.mcg.entity.flow.script.FlowScript;
+import com.main.mcg.entity.flow.sqlexecute.FlowSqlExecute;
+import com.main.mcg.entity.flow.sqlquery.FlowSqlQuery;
+import com.main.mcg.entity.flow.start.FlowStart;
+import com.main.mcg.entity.flow.text.FlowText;
+
 
 public class McgDirector {
     private ArrayList<String> sequence = new ArrayList<String>();
